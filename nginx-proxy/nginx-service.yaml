@@ -11,4 +11,11 @@ spec:
     port: 80
     targetPort: 80
   type: LoadBalancer
-  loadBalancerIP: localhost
+  ports:
+    - port: 80
+      targetport: 80
+      protocol: TCP
+  selector:
+      app: nginx
+      
+  
